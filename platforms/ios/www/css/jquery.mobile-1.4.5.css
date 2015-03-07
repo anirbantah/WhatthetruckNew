@@ -1488,7 +1488,7 @@ div.ui-mobile-viewport {
 .ui-footer {
 	border-width: 0 0;
 	border-style: solid;
-	position: relative;
+	position: fixed;
 }
 .ui-header:empty,
 .ui-footer:empty {
@@ -2685,7 +2685,7 @@ li.ui-block-e {
   top: -1px;
 }
 .ui-header-fixed.ui-fixed-hidden {
-	top: 0;
+	top: -1px;
 	padding-top: 0;
 }
 .ui-header-fixed .ui-btn-left,
@@ -2704,7 +2704,7 @@ li.ui-block-e {
 	border-color: transparent;
 }
 .ui-footer-fixed.ui-fixed-hidden {
-	bottom: 0;
+	bottom: -1px;
 	padding-bottom: 0;
 }
 .ui-header-fullscreen,
@@ -2735,7 +2735,7 @@ li.ui-block-e {
 }
 .ui-page-header-fullscreen .ui-fixed-hidden,
 .ui-page-footer-fullscreen .ui-fixed-hidden {
-	position: absolute !important;
+	position: fixed !important;
 	height: 1px;
 	width: 1px;
 	overflow: hidden;
@@ -3104,6 +3104,7 @@ fieldset.ui-controlgroup {
 	position: relative;
 	top: -1em;
 }
+
 .ui-dialog-contain > .ui-header, 
 .ui-dialog-contain > .ui-content, 
 .ui-dialog-contain > .ui-footer { 
@@ -3111,6 +3112,9 @@ fieldset.ui-controlgroup {
 	position: relative; 
 	width: auto;
 	margin: 0;
+}
+.ui-dialog-contain > .ui-header {
+	position: fixed;
 }
 .ui-dialog-contain > .ui-header {
 	overflow: hidden;
@@ -3125,7 +3129,7 @@ fieldset.ui-controlgroup {
 }
 .ui-popup-open .ui-header-fixed,
 .ui-popup-open .ui-footer-fixed {
-	position: absolute !important; /* See issues #4816, #4844 and #4874 and popup.js */
+	position: fixed !important; /* See issues #4816, #4844 and #4874 and popup.js */
 }
 .ui-popup-screen {
 	background: #000 ;

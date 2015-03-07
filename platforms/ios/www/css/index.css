@@ -380,7 +380,19 @@ img {
 .main-menu li a span.menu-signin {
 	background-image: url(../img/menu-signin.png);
 }
-
+.main-menu li a span.busket-val {
+background: #3da2da;
+border-radius: 50%;
+-webkit-border-radius: 50%;
+font-size: 14px;
+height: 20px;
+left: 5px;
+margin-top: 2px;
+position: absolute;
+text-align: center;
+width: 20px;
+display: block;
+}
 .inner-content {
 	padding: 10px;
 }
@@ -397,8 +409,8 @@ img {
 .bar-default:focus,
 .bar-default:active {
     background: none repeat scroll 0 0 #fff;
-    box-shadow: -1px 0 0 0 #7f7c7c inset, 1px 0 0 0 #7f7c7c inset;
-    	-webkit-box-shadow: -1px 0 0 0 #7f7c7c inset, 1px 0 0 0 #7f7c7c inset;
+    box-shadow: 0px 0 0 0 #7f7c7c inset, 1px 0 0 0 #7f7c7c inset;
+    	-webkit-box-shadow: 0px 0 0 0 #7f7c7c inset, 1px 0 0 0 #7f7c7c inset;
 }
 .bar-default:first-child:hover,
 .bar-default:first-child:focus,
@@ -409,6 +421,9 @@ img {
 .bar-default:last-child:focus,
 .bar-default:last-child:active {
 	box-shadow: -1px -1px 0 0 #7f7c7c inset, 1px 0 0 0 #7f7c7c inset;
+}
+.bar-default:last-child {
+	border-bottom: 1px solid #7f7c7c;
 }
 .search-result-box {
 	padding: 6px 60px 6px 5px;
@@ -475,6 +490,26 @@ img {
 	font-size: 14px;
 	font-family: 'avantgarde_bk_btbook';
 }
+
+.right-small-box1 {
+  position: absolute;
+  right: 10px;
+  text-align: right;
+  top: 5px;
+  max-width: 70px;
+}
+.right-small-box1 h6 {
+	margin: 0;
+	margin-bottom: 3px;
+	font-size: 13px;
+	font-weight: 400;
+}
+.right-small-box1 h5 {
+	margin: 0;
+	color: #000000;
+	font-size: 14px;
+	font-family: 'avantgarde_bk_btbook';
+}
 .big-calender {
 	width: 43px;
 	height: 50px;
@@ -493,7 +528,7 @@ img {
     border-left: 1px solid #6d6a6a;
     display: inline-block;
     line-height: 1;
-    padding: 0 6px;
+    padding: 0 4px;
 }
 .inline-box span:first-child {
 	border-left: none;
@@ -565,7 +600,9 @@ img {
 	padding-right: 2.5em;
 }
 .ui-select .ui-btn:hover {
-	background-color: #c7c7c7;
+	background-color: #2e2731;
+	color: #fff;
+	text-shadow: none;
 }
 .ui-select .ui-btn.ui-focus {
 	box-shadow: 0 -2px 2px rgba(0, 0, 0, 0.3);
@@ -578,9 +615,9 @@ img {
 	background-position: center center;
 }
 .list-truck-price {
-	border-top: 3px solid #868483;
+	/*border-top: 3px solid #868483;*/
   margin: 0 -10px;
-  padding: 5px 10px 0;
+  padding: 0px 10px 0;
 }
 .list-truck-price h4, .search-result-box h4, .search-result-box h2 {
 	margin: 0;
@@ -758,6 +795,38 @@ img {
   margin-right: 12px;
   width: 60px;
 }
+
+.settingBorderRow .yahSttings {
+background-image: url("../img/yahoo2.png");
+ background-position: center center;
+ background-repeat: no-repeat;
+ display: inline-block;
+ float: left;
+ height: 60px;
+ margin-right: 12px;
+ width: 60px;
+}
+.settingBorderRow .gpSttings {
+background-image: url("../img/gplus2.png");
+ background-position: center center;
+ background-repeat: no-repeat;
+ display: inline-block;
+ float: left;
+ height: 60px;
+ margin-right: 12px;
+ width: 60px;
+}
+.settingBorderRow .twSttings {
+background-image: url("../img/twitter2.png");
+ background-position: center center;
+ background-repeat: no-repeat;
+ display: inline-block;
+ float: left;
+ height: 60px;
+ margin-right: 12px;
+ width: 60px;
+}
+
 .settingBorderRow h4 {
 	color: #000000;
   font-family: "avantgarde_bk_btbook";
@@ -869,6 +938,11 @@ img {
     position: relative;
 }
 .contactInfoHeader .right-small-box {
+	top: 12px;
+	right: 10px;
+}
+
+.contactInfoHeader .right-small-box1 {
 	top: 12px;
 	right: 10px;
 }
@@ -1065,10 +1139,11 @@ fieldset.selectCardType {
 	background-repeat: no-repeat;
   text-indent: -9999px;
   cursor: pointer;
-  width: 29px;
+  width: 30px;
   height: 29px;
   float: left;
   text-align: center;
+  background-size: contain;
 }
 .increase-btn .button.inc {
   background-image: url(../img/plus-green-icon.png);
@@ -1087,6 +1162,7 @@ fieldset.selectCardType {
 .headerTopBox h2 {
 	margin: 0 0 5px;
 	font-family: "avantgarde_bk_btbook";
+	font-size: 20px;
 	
 }
 .headerTopBox .icon-block {
@@ -1243,9 +1319,300 @@ p.split-text {
     padding: 5px 0;
 }
 
+.cart_value {
+    background: none repeat scroll 0 0 #3da2da;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    color: #fff;
+    display: block;
+    font-size: 11px;
+    font-weight: 600;
+    height: 20px;
+    line-height: 20px;
+    position: absolute;
+    right: 13px;
+    text-align: center;
+    top: 0;
+    width: 20px;
+}
+
+a {
+	color:white;
+	text-decoration: none;
+}
+
+.header_style
+{
+	padding-top: 10px;
+}
+
+.top_header_style
+{
+	padding-top: 10px;
+}
+
+.back-btn
+{
+	margin-top:10px;
+}
+
+.menu-btn
+{
+	margin-top:10px;
+}
+
+
+.ui-radio .ui-btn {
+box-shadow: none;
+-webkit-box-shadow: none;
+}
 /*.ui-panel-page-container {
 	overflow: hidden;
 }*/
+
+.ui-radio .ui-btn {
+  border: none !important;
+  box-shadow: none !important;
+}
+.listingRadio {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  margin-right: -10px;
+}
+.listingRadio > li {
+  padding: 10px 4px;
+  border-bottom: 1px solid #9f9c9c;
+}
+.listingRadio > li:last-child {
+  border-bottom: none;
+}
+.inputRadio {
+    
+}
+.inputRadio input {
+  display: none;
+}
+.inputRadio input + label {
+  display: block;
+  position: relative;
+  margin: 0;
+  font-size: 14px;
+}
+.inputRadio input + label:after {
+  content: "";
+  height: 10px;
+  position: absolute;
+  right: 7px;
+  top: 2px;
+  width: 10px;
+  z-index: 99;
+}
+.inputRadio input:checked + label {
+    
+}
+.inputRadio input:checked + label:after {
+	background-image: url(../img/icon-check.png);
+}
+.main-menu li a span.busket-val {
+	background: #3da2da;
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	font-size: 14px;
+	height: 20px;
+	left: 5px;
+	margin-top: 2px;
+	position: absolute;
+	text-align: center;
+	width: 20px;
+}
+
+.icon-block.menu-only {
+    background-image: url("../img/view-menu.png");
+    color: #666766;
+}
+.popUp > img.sorry {
+    margin-bottom: 3px;
+    margin-top: 20px;
+    width: 68%;
+}
+.req-truck {
+    font-size: 18px;
+}
+.req-truck {
+    color: #22a6ee;
+    font-weight: 600;
+}
+
+
+
+
+table {
+	border-collapse: collapse !important;
+}
+table th {
+	border-collapse: collapse !important;
+	border: none !important;
+}
+table td {
+	border-left: none !important;
+	border-right: none !important;
+	border-bottom: 1px solid #ddd;
+}
+
+.editIcon {
+	background-image: url(../img/edit-icon.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	width: 35px;
+	height: 20px;
+	display: block;
+}
+table th, table td {
+line-height: 1.5em;
+padding: 0.4em 0.5em;
+text-align: center;
+}
+
+.main-menu li,
+.main-menu li a {
+position: relative;
+}
+.slideroffon {
+   font-size: 0;
+}
+
+label.custom-select {
+	position: relative;
+	overflow: hidden;
+	padding-bottom: 1px;
+	margin-bottom: 0;
+		background-image: url(../img/dropdown-arrow_new.png);
+	background-repeat: no-repeat;
+	background-position: right center;
+	background-color: #2e2731;
+	border-radius: 17px;
+	-moz-border-radius: 17px;
+	-webkit-border-radius: 17px;
+	-o-border-radius: 17px;
+}
+
+label.custom-select:hover {
+background-color: #c7c7c7;
+box-shadow: -1px -1px 2px #9c9c9c;
+}
+
+
+.custom-select select {
+	display: inline-block;
+	border: 0;
+	margin: 0;
+	outline:none; /* remove focus ring from Webkit */
+	
+	appearance: none;
+	-moz-appearance: none; /* Firefox */
+	-webkit-appearance: none; /* Safari and Chrome */
+	-ms-appearance: none;
+	font-weight: normal;
+	padding: 7px 30px 5px 15px;
+	font-size: 13px;
+	width: 100%;
+	
+	color: #ffffff;
+	background:  transparent;
+
+} 
+
+label.custom-select:hover select {
+color: #333;
+text-shadow: 0 1px 0 #f3f3f3;
+
+}
+
+/* for Webkit's CSS-only solution */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	.custom-select select {
+		padding-right:50px; 
+	}
+}
+
+/* Since we removed the default focus styles, we have to add our own */
+.custom-select select:focus {
+
+}
+.no-pointer-events .custom-select:after {
+	content: none;
+}
+select::-ms-expand{
+	display:none;
+}
+.heart-icon {
+    right: 43px;
+}
+.right-icon.delete {
+    border: 2px solid #d5465c;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    height: 25px;
+    right: 5px;
+    top: 15px;
+    width: 25px;
+}
+.ui-header {
+	position: fixed !important;
+}
+
+
+
+
+
+
+/*02-03-2015*/
+.inner-content {
+  
+}
+#searchResult .inner-content {
+	
+}
+
+
+#truckDetails .list-truck-price {
+  
+}
+.bar-default {
+	margin-right: -10px;
+}
+.contactInfoHeader .bar-default {
+	margin-right: 0px;
+}
+.listGroup .bar {
+	padding: 15px 5px 15px 0;
+}
+#speInstruction {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+  display: block;
+  line-height: 1.4em;
+  outline: 0 none;
+  padding: 0.4em;
+  width: 100%;
+	background: none repeat scroll 0 0 #fff;
+  border-color: #6f6c6f !important;
+  border-radius: 7px;
+  border-style: solid;
+  border-width: 2px;
+  box-shadow: none;
+  font-size: 16px;
+  margin: 0.5em 0;
+}
+.listGroup .bar:last-child {
+	border: none;
+}
+
+
+
+
 
 
 

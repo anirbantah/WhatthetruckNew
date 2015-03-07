@@ -28,8 +28,43 @@
 #import <Cordova/CDVViewController.h>
 #import <Cordova/CDVCommandDelegateImpl.h>
 #import <Cordova/CDVCommandQueue.h>
-
-@interface MainViewController : CDVViewController
+#import <CoreLocation/CoreLocation.h>
+#import <Accounts/Accounts.h>
+@interface MainViewController : CDVViewController<CLLocationManagerDelegate>{
+    
+    CLLocationManager *locationManager;
+    NSString *lat;
+    NSString *longt;
+    NSMutableArray *data_retrived;
+    NSString *streetAdd;
+    
+    ACAccountStore *accountStore;
+    ACAccount *twitterAccount;
+    NSDictionary *twittdict;
+    
+    NSString *emailstring;
+    
+    NSString *prof_img;
+    
+    NSString *namel,*twitterid,*profImageBig,*existsemail;
+    
+    BOOL chckusrmail;
+    UIAlertView *alert;
+    UIActivityIndicatorView *spinnern;
+    NSDictionary *json1;
+    UIImageView *imgspin;
+    UITextField *mailtwtrfield;
+    NSUserDefaults *defaults;
+    NSMutableDictionary *resultfb, *resultTwit;
+    NSString *profileimageURL;
+    UIView *UsBackView, *blackview, *backview;
+    UIView *mainview;
+    UITextField *username, *email;
+    NSMutableDictionary *myStringfb, *myStringTwit;
+    NSString *emailTwit, *scrnm;
+    UIAlertView *validAlert;
+    UIWebView *theWebViewLL;
+}
 
 @end
 

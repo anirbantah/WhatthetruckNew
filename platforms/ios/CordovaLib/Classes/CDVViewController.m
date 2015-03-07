@@ -186,13 +186,29 @@
     self.startupPluginNames = delegate.startupPluginNames;
     self.whitelist = [[CDVWhitelist alloc] initWithArray:delegate.whitelistHosts];
     self.settings = delegate.settings;
-
-    // And the start folder/page.
-    self.wwwFolderName = @"www";
-    self.startPage = delegate.startPage;
-    if (self.startPage == nil) {
-        self.startPage = @"index.html";
+    
+    
+    if(UI_USER_INTERFACE_IDIOM () == UIUserInterfaceIdiomPad){
+        NSLog(@"This is iPad");
+        
+        // And the start folder/page.
+        self.wwwFolderName = @"www/www_ipad";
+        self.startPage = delegate.startPage;
+        if (self.startPage == nil) {
+            self.startPage = @"index.html";
+        }
+    }else if (UI_USER_INTERFACE_IDIOM () == UIUserInterfaceIdiomPhone){
+        NSLog(@"This is iPhone");
+        
+        // And the start folder/page.
+        self.wwwFolderName = @"www";
+        self.startPage = delegate.startPage;
+        if (self.startPage == nil) {
+            self.startPage = @"index.html";
+        }
     }
+
+    
 
     // Initialize the plugin objects dict.
     self.pluginObjects = [[NSMutableDictionary alloc] initWithCapacity:20];
